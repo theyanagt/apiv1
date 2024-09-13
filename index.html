@@ -1,390 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Free Rest Api. No Need Api Key And Unlimited Requests...">
-    <meta name="author" content="junn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Rest API. No API Key Required and Unlimited Requests...">
+    <meta name="author" content="Ahyan">
     <meta property="og:image" content="https://telegra.ph/file/1b3662116971f9c342c51.jpg">
     <title>Ahyan-APIs │ Docs</title>
-    <script src="https://kit.fontawesome.com/5367cb78eb.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="https://cdn.meitang.xyz/file/BQACAgUAAxkDAAJPxWbjsjei5-llCWtI2cKu3Ir03BXxAALgFwACaQIZV79wwJEmDpaPNgQ"/> 
     <link href="https://zeltoria.github.io/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://zeltoria.github.io/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="https://zeltoria.github.io/css/default.css" rel="stylesheet">
-    	<script>
-	</script>
     <link href="https://zeltoria.github.io/css/style.css" rel="stylesheet">
-      <style>
-    html {
-        height: 100%;
-    }
-
-    body {
-        height: 100%;
-        margin: 0px;
-    }
-
-    .center .description .clock {
-        color: #FFFFFF;
-        font-size: 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    .center {
-        font-family: 'Montserrat', sans-serif;
-        text-align: center;
-        margin: 0px;
-        width: 100%;
-        color: #8427f3;
-        z-index: 1;
-        padding-top: 150px;
-    }
-
-    .center h1 {
-        font-size: 4rem;
-    }
-
-    .center .description {
-        font-family: monospace;
-        line-height: 22px;
-        font-size: 18px;
-        width: 370px;
-        margin: auto;
-        margin-top: 10px;
-        margin-bottom: 25px;
-    }
-
-    .center .description a {
-        text-decoration: none;
-        color: #0000FF;
-        text-style: bold;
-    }
-
-    .select {
-        display: inline-block;
-        margin-right: 10px;
-        position: relative;
-    }
-
-    select {
-        transition: background-color 200ms ease;
-        font-size: 14px;
-        padding: 10px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        box-sizing: border-box;
-        border-radius: 3px;
-        font-family: monospace;
-        padding-right: 30px;
-        position: relative;
-        outline: 0px;
-        background: #3b19c4;
-        cursor: pointer;
-    }
-
-    .select:after {
-        content: "▼";
-        padding: 14px 8px;
-        position: absolute;
-        right: 13px;
-        top: 0;
-        z-index: 1;
-        text-align: center;
-        width: 10%;
-        height: 100%;
-        pointer-events: none;
-        box-sizing: border-box;
-        font-size: 9px;
-    }
-
-    button {
-        transition: background-color 200ms ease;
-        font-size: 14px;
-        padding: 10px 12px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        box-sizing: border-box;
-        border-radius: 3px;
-        border: 1px solid #aaa;
-        background: #fff;
-        font-family: monospace;
-        cursor: pointer;
-        outline: 0px;
-    }
-
-    button:hover,
-    select:hover {
-        background-color: #eee;
-    }
-
-    .center .links {
-        padding-top: 10px;
-        font-family: monospace;
-        letter-spacing: 0.3px;
-        font-size: 14px;
-    }
-
-    .center .links a {
-        text-decoration: none;
-        margin-left: 0px;
-        margin-right: 100px;
-        color: #ce18ff;
-    }
-
-    .center .links a:hover {
-        text-decoration: underline;
-    }
-
-    .center .grid {
-      display: grid;
-      column-gap: 50px;
-    }
-    .center .grid hr {
-      border-top: 1px dashed gray;
-    }
-    .center .grid-item {
-      font-family: monospace;
-      letter-spacing: 0.3px;
-      font-size: 14px;
-      padding-bottom: 20px;
-    }
-    .center .grid-item a {
-      float: left;
-      text-decoration: none;
-      margin-left: 10px;
-      margin-right: 10px;
-      color: #b100de;
-    }
-
-    footer{
-        color: #000;
-        text-align: center;
-        padding-bottom: 10px;
-    }
-
-    iframe {
-        margin-left: 14px;
-        margin-bottom: -5px;
-    }
-
-    @media (max-width: 900px) {
-        .center h1 {
-            font-size: 50px;
+    <style>
+        body {
+            background-color: #282a36;
+            color: #f8f8f2;
+            font-family: 'Montserrat', sans-serif;
         }
-        .center .links a,
-        .center .links iframe {
-            display: block;
-            margin: auto;
-            margin-bottom: 12px;
-        }
-        .divider {
-            display: none;
-        }
-    }
 
-    @media (max-width: 400px) {
-        .center h1 {
-            font-size: 26px;
+        .center {
+            text-align: center;
+            padding: 50px 0;
         }
-        .center .description {
-            font-size: 14px;
+
+        h1 {
+            font-size: 3.5rem;
+            color: #50fa7b;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            font-size: 2rem;
+            margin-top: 40px;
+            color: #ff79c6;
+        }
+
+        .description {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #bd93f9;
+        }
+
+        .clock {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .table-container {
+            margin-top: 30px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        table {
             width: 100%;
-            padding-left: 40px;
-            padding-right: 40px;
-            box-sizing: border-box;
-        }
-      }
-      table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th, td {
-      padding: 8px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-
-    th {
-      background-color: #09d400;
-    }
-
-    a {
-      color: blue;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-          .user-chat:empty {
-           background-color: transparent;
-           pointer-events: none;
-        }
-           .chat-container {
-            background-color: var(--primary);
-            color: #b700fe;
-            padding: 10px;
-            border-radius: 5px;
-            height: 300px;
-            overflow-y: scroll;
+            border-collapse: collapse;
+            background-color: #44475a;
+            color: #f8f8f2;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
         }
 
-        .user-chat {
-            background-color: #dcf8c6;
-            color: #000;
-            padding: 5px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-        }
-            .bot-chat {
-            background-color: #ffffff;
-            color: #8b08d9;
-            padding: 5px;
-            margin-bottom: 10px;
-            border-radius: 5px;
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #6272a4;
         }
 
-    .live-chat-input {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #f5f5f5;
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      padding: 10px;
-    }
+        th {
+            background-color: #ff5555;
+            color: #fff;
+        }
 
-    #inputText {
-      flex: 1;
-      border: none;
-      outline: none;
-      margin-right: 10px;
-      font-size: 16px;
-    }
+        a {
+            color: #8be9fd;
+            text-decoration: none;
+        }
 
-    #submitBtn {
-      background-color: #4CAF50;
-      color: #fff;
-      border: none;
-      outline: none;
-      padding: 8px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 16px;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    #submitBtn:hover {
-      background-color: #45a049;
-    }
-    }
-  </style>
+        footer {
+            color: #50fa7b;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .center h1 {
+                font-size: 2.8rem;
+            }
+            .description {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            table, th, td {
+                font-size: 14px;
+            }
+            .description {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
-<body id="page-top" class="dark-mode">
-<div class="center">
-    <h1>Ahyan API</h1>
-    <div class="description">
-        Welcome To Ahyan Rest API's
-        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-        <h3>AI</h3>
-        <table>
-            <hr>
-            <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Method</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Ragbot AI</td>
-                <td>GET</td>
-                <td><a href="/api/ragbot?message=hai">[COBA]</a></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Degreeguru AI</td>
-                <td>GET</td>
-                <td><a href="/api/degreeguru?message=hai">[COBA]</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>SmartContract AI</td>
-                <td>GET</td>
-                <td><a href="/api/smartcontract?message=hai">[COBA]</a></td>
-            </tr>
-            <tr>
-               <td>4</td>
-               <td>BlackboxAIChatAI </td>
-               <td>GET</td>
-               <td><a href="/api/blackboxAIChat?message=hai">[COBA]</a></td>
-            </tr>
-         <tr>
-                <td>1</td>
-                <td>Ragbot AI</td>
-                <td>GET</td>
-                <td><a href="/api/roblox?message=ahyan">[COBA]</a></td>
-            </tr>
-            <tr>
-        </table>
-        <h3>Downloader</h3>
-        <table>
-            <hr>
-            <tr>
-                <th>No</th>
-                <th>Name</th>
-                <th>Method</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Facebook Downloader</td>
-                <td>GET</td>
-                <td><a href="/api/facebook?url=https://www.facebook.com/reel/947495549897838">[COBA]</a></td>
-            </tr>
-        </table>
-    </div>
-  <script>
-    function showTime() {
-      const date = new Date();
-      const h = date.getHours(); 
-      const m = date.getMinutes(); 
-      const s = date.getSeconds(); 
-      const time = h + ":" + m + ":" + s;
-      document.getElementById("MyClockDisplay").innerText = time;
-      setTimeout(showTime, 1000);
-  }
+<body>
+    <div class="center">
+        <h1>Ahyan API</h1>
+        <div class="description">
+            Explore a wide variety of REST APIs for your projects. No API key required, no limits!
+        </div>
+        <div id="MyClockDisplay" class="clock"></div>
 
-  showTime();
-</script>
-      <!-- partial -->
-      <script>
-        const buttons = document.querySelectorAll(".card-buttons button");
-        const sections = document.querySelectorAll(".card-section");
-        const card = document.querySelector(".card");
-        const handleButtonClick = e => {
-          const targetSection = e.target.getAttribute("data-section");
-          const section = document.querySelector(targetSection);
-          targetSection !== "#about" ? card.classList.add("is-active") : card.classList.remove("is-active");
-          card.setAttribute("data-state", targetSection);
-          sections.forEach(s => s.classList.remove("is-active"));
-          buttons.forEach(b => b.classList.remove("is-active"));
-          e.target.classList.add("is-active");
-          section.classList.add("is-active");
-        };
-        buttons.forEach(btn => {
-          btn.addEventListener("click", handleButtonClick);
-        });
-      </script>
+        <!-- AI Endpoints Section -->
+        <h3>Artificial Intelligence APIs</h3>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>API Name</th>
+                    <th>Method</th>
+                    <th>Try It</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ragbot AI</td>
+                    <td>GET</td>
+                    <td><a href="/api/ragbot?message=hello">Test</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Degreeguru AI</td>
+                    <td>GET</td>
+                    <td><a href="/api/degreeguru?message=hello">Test</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>SmartContract AI</td>
+                    <td>GET</td>
+                    <td><a href="/api/smartcontract?message=hello">Test</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>BlackboxAI Chat AI</td>
+                    <td>GET</td>
+                    <td><a href="/api/blackboxAIChat?message=hello">Test</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Downloader Section -->
+        <h3>Media Downloaders</h3>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>API Name</th>
+                    <th>Method</th>
+                    <th>Try It</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Facebook Video Downloader</td>
+                    <td>GET</td>
+                    <td><a href="/api/facebook?url=https://www.facebook.com/reel/123456789">Test</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+          </script>
       <script src="https://cdn.jsdelivr.net/gh/scottschiller/Snowstorm/snowstorm.js" type="text/javascript"></script>
       <script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js" type="text/javascript"></script>
-      <div class="footer">
-        <p style="text-align: center;color: white;"> © Powered By Ahyan </p>
-      </div>
-    </body>
-    <script src="/index.html"></script>
+    <footer>
+        <p>Powered by Ahyan</p>
+    </footer>
+
+    <script>
+        function showTime() {
+            const date = new Date();
+            const h = String(date.getHours()).padStart(2, '0');
+            const m = String(date.getMinutes()).padStart(2, '0');
+            const s = String(date.getSeconds()).padStart(2, '0');
+            const time = h + ":" + m + ":" + s;
+            document.getElementById("MyClockDisplay").innerText = time;
+            setTimeout(showTime, 1000);
+        }
+
+        showTime();
+    </script>
+</body>
 </html>
