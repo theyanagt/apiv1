@@ -139,19 +139,26 @@ app.get('/api/blackboxAIChat', async (req, res) => {
 app.get('/api/roblox', async (req, res) => {
   try {
     const message = req.query.message;
-    if (!message) {
-      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    const type = req.query.type; // Tambahkan tipe (name atau id)
+
+    // Cek apakah parameter "message" dan "type" ada
+    if (!message || !type) {
+      return res.status(400).json({ error: 'Parameter "message" atau "type" tidak ditemukan' });
     }
-    const response = await scr.Roblox(message);
+
+    // Panggil fungsi Roblox dengan parameter yang benar
+    const response = await scr.Roblox(message.split(" "), type); // Pisahkan kata-kata jika diperlukan
+
     res.status(200).json({
       status: 200,
       creator: "AyanDev",
-      data: { response }
+      data: response
     });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ error: error.message }); // Perbaiki kesalahan penulisan
   }
 });
+
 
 
 
