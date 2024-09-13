@@ -134,6 +134,27 @@ app.get('/api/blackboxAIChat', async (req, res) => {
   }
 });
 
+
+// Endpoint untuk Roblox
+app.get('/api/roblox', async (req, res) => {
+  try {
+    const message = req.query.message;
+    if (!message) {
+      return res.status(400).json({ error: 'Parameter "message" tidak ditemukan' });
+    }
+    const response = await scr.Roblox(message);
+    res.status(200).json({
+      status: 200,
+      creator: "AyanDev",
+      data: { response }
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
+
 // Handle 404 error
 app.use((req, res, next) => {
   res.status(404).send("Sorry can't find that!");
