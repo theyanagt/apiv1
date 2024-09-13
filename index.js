@@ -17,18 +17,18 @@ mess = {
     error: {
         status: false,
         message: 'Error, Service Unavaible',
-        maintanied_by: 'Hyuu'
+        maintanied_by: 'AyanDev'
     },
     noturl: {
     	status: false,
     	message: 'Error, Invalid Url',
-    	maintanied_by: 'Hyuu'
+    	maintanied_by: 'AyanDev'
     },
     notquery: {
     	status: false,
     	code: 403,
     	message: 'Error, Invalid Query',
-    	maintanied_by: 'Hyuu'
+    	maintanied_by: 'AyanDev'
     }
 }
 
@@ -72,7 +72,7 @@ app.get('/api/ragbot', async (req, res) => {
     const response = await scr.ragBot(message);
     res.status(200).json({
       status: 200,
-      creator: "Hyuu",
+      creator: "AyanDev",
       data: { response }
     });
   } catch (error) {
@@ -90,7 +90,7 @@ app.get('/api/degreeguru', async (req, res) => {
     const response = await scr.degreeGuru(message);
     res.status(200).json({
       status: 200,
-      creator: "Hyuu",
+      creator: "AyanDev",
       data: { response }
     });
   } catch (error) {
@@ -108,7 +108,7 @@ app.get('/api/smartcontract', async (req, res) => {
     const response = await scr.smartContract(message);
     res.status(200).json({
       status: 200,
-      creator: "Hyuu",
+      creator: "AyanDev",
       data: { response }
     });
   } catch (error) {
@@ -126,7 +126,7 @@ app.get('/api/blackboxAIChat', async (req, res) => {
     const response = await scr.blackboxAIChat(message);
     res.status(200).json({
       status: 200,
-      creator: "Hyuu",
+      creator: "AyanDev",
       data: { response }
     });
   } catch (error) {
